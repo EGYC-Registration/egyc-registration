@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>East Gibson Youth Club — Registration</title>
+<style>
+  :root {
+    --green-dark: #1f3320;
+    --green: #2e4a2f;
+    --cream: #f1e9d2;
+    --cream-light: #faf7ec;
+    --accent: #c9a227;
+    --text: #1f2a1f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--cream-light);
+    color: var(--text);
+  }
+  header {
+    background: var(--green-dark);
+    color: var(--cream);
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 6px solid var(--accent);
+  }
+  header .crest {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--cream);
+    border-radius: 6px;
+    line-height: 64px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    letter-spacing: -2px;
+  }
+  header h1 {
+    margin: 0.25rem 0 0.25rem;
+    font-size: 1.9rem;
+    letter-spacing: 0.5px;
+  }
+  header p {
+    margin: 0;
+    color: var(--cream);
+    opacity: 0.85;
+    font-size: 0.95rem;
+  }
+  main {
+    max-width: 640px;
+    margin: -2rem auto 3rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    overflow: hidden;
+  }
+  .section {
+    padding: 2rem 2rem;
+    border-bottom: 1px solid #eee;
+  }
+  .section:last-child { border-bottom: none; }
+  .section h2 {
+    color: var(--green-dark);
+    font-size: 1.15rem;
+    margin: 0 0 1rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 0.6rem;
+  }
+  label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0.9rem 0 0.3rem;
+    color: var(--green-dark);
+  }
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px dashed var(--green);
+    border-radius: 6px;
+    background: var(--cream-light);
+    font-size: 0.9rem;
+  }
+  .hint {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.3rem;
+  }
+  .ref-box {
+    background: var(--cream-light);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 0.75rem 0 1.25rem;
+    font-size: 0.95rem;
+  }
+  .ref-code {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background: #fff;
+    border: 1px dashed var(--green);
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+    margin-top: 0.3rem;
+  }
+  .pay-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1rem;
+    border: 1px solid #e2ddc8;
+    border-radius: 8px;
+    margin-bottom: 0.9rem;
+  }
+  .pay-option .badge {
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.85rem;
+  }
+  .badge.paypal { background: #003087; }
+  .badge.venmo { background: #3D95CE; }
+  .pay-option .details { font-size: 0.9rem; }
+  .pay-option .details strong { color: var(--green-dark); }
+  .paypal-btn {
+    display: inline-block;
+    margin-top: 0.6rem;
+    background: #ffc439;
+    color: #003087;
+    font-weight: bold;
+    padding: 0.55rem 1.4rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  button.submit {
+    width: 100%;
+    background: var(--green-dark);
+    color: var(--cream);
+    border: none;
+    padding: 0.95rem;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+  }
+  button.submit:hover { background: var(--green); }
+  .consent {
+    font-size: 0.82rem;
+    color: #555;
+    margin-top: 1rem;
+    line-height: 1.4;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    padding: 1.5rem;
+  }
+  .edit-note {
+    background: #fff4e0;
+    border: 1px solid #e0b64a;
+    color: #6b4e00;
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    margin: 0 0 1.5rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="crest">EG</div>
+  <h1>East Gibson Youth Club</h1>
+  <p>2026–2027 Member Registration</p>
+</header>
+
+<main>
+  <form id="regForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+
+    <div class="section">
+      <div class="edit-note">
+        Setup note (remove this box once configured): replace <code>YOUR_FORM_ID</code> above with your real Formspree form ID. PayPal and Venmo details are already filled in below.
+      </div>
+      <h2>Child Information</h2>
+      <label for="childName">Child's Full Name</label>
+      <input type="text" id="childName" name="Child Name" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="Date of Birth" required>
+
+      <label for="grade">Grade / Age Group</label>
+      <input type="text" id="grade" name="Grade or Age Group" placeholder="e.g. 3rd grade, U10">
+    </div>
+
+    <div class="section">
+      <h2>Parent / Guardian Information</h2>
+      <label for="parentName">Parent/Guardian Name</label>
+      <input type="text" id="parentName" name="Parent Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="Phone" required>
+    </div>
+
+    <div class="section">
+      <h2>Birth Certificate Upload</h2>
+      <label for="birthCert">Upload a photo or scan of the birth certificate</label>
+      <input type="file" id="birthCert" name="Birth Certificate" accept="image/*,.pdf" required>
+      <p class="hint">Accepted: JPG, PNG, or PDF. This document is used only to verify age eligibility and is kept private.</p>
+    </div>
+
+    <div class="section">
+      <h2>Payment</h2>
+
+      <div class="ref-box">
+        Your registration reference code (write this in the payment note):
+        <div class="ref-code" id="refCode">EGYC-XXXX</div>
+      </div>
+
+      <div class="pay-option">
+        <div class="badge paypal">PayPal</div>
+        <div class="details">
+          <strong>Pay via PayPal</strong><br>
+          Send the registration fee to <strong>paypal.me/EGYCtrojans</strong>.<br>
+          <a class="paypal-btn" href="https://paypal.me/EGYCtrojans" target="_blank" rel="noopener">Pay with PayPal</a>
+        </div>
+      </div>
+
+      <div class="pay-option">
+        <div class="badge venmo">Venmo</div>
+        <div class="details">
+          <strong>Pay via Venmo</strong><br>
+          Send to <strong>@EGYC-Trojans</strong> and include the reference code above in the payment note so we can match it to your registration.
+        </div>
+      </div>
+
+      <label for="paymentMethod">Which method did you use?</label>
+      <select id="paymentMethod" name="Payment Method" required>
+        <option value="">Select one</option>
+        <option value="PayPal">PayPal</option>
+        <option value="Venmo">Venmo</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <button type="submit" class="submit">Submit Registration</button>
+      <p class="consent">
+        By submitting, you confirm the uploaded document is your child's birth certificate and consent to East Gibson Youth Club storing it solely for age verification purposes. Access is limited to club administrators.
+      </p>
+    </div>
+
+  </form>
+</main>
+
+<footer>
+  East Gibson Youth Club &middot; Questions? Contact your club administrator.
+</footer>
+
+<script>
+  document.getElementById('refCode').textContent =
+    'EGYC-' + Math.floor(1000 + Math.random() * 9000);
+</script>
+
+</body>
+</html>
